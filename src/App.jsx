@@ -1,5 +1,4 @@
-import "./App.css";
-import Form from "./pages/forms/Form";
+import Form from "./pages/forms/FormField";
 
 function App() {
   return <Form />;

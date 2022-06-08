@@ -1,4 +1,7 @@
-import { Title } from "./Form.style";
+import { Title } from "./FormField.style";
+// import { Form } from "./Form.style"
+import {Img} from "./FormField.style"
+
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import FormLogo from "../../assets/form-logo.png";
@@ -49,17 +52,16 @@ const Form = () => {
 
       <img src={FormLogo} alt="imagem-logo" />
 
-      {InputFields.map((field, index) => (
-        <InputField
-          key={field.name + index}
-          name={field.name}
-          label={field.label}
-          type={field.type}
-          disabled={field.name === "confirmPassword" ? !password : false}
-          register={register}
-          errors={errors}
+      {InputFields.map((field, index) =>
+        <InputField key={field.name+index}
+        name={field.name}
+        label={field.label}
+        type={field.type}
+        disabled={field.name === "confirmPassword" ? !password : false}
+        register={register}
+        errors={errors}
         />
-      ))}
+      )}
       <button type="submit">Cadastrar</button>
     </form>
     // <form onSubmit={handleSubmit(onSubmit)}>
