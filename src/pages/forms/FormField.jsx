@@ -1,6 +1,4 @@
-import { Title } from "./FormField.style";
-// import { Form } from "./Form.style"
-import {Img} from "./FormField.style"
+import { Title, Img, Button, FormCSS } from "./FormField.style";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 
@@ -44,26 +42,24 @@ const Form = () => {
 
   const password = watch("password");
 
-  //  console.log(errors);
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <FormCSS onSubmit={handleSubmit(onSubmit)}>
       <Title>Formulário</Title>
+      <Img src={FormLogo} alt="imagem-logo" />
 
-      <img src={FormLogo} alt="imagem-logo" />
-
-      {InputFields.map((field, index) =>
-        <InputField key={field.name+index}
-        name={field.name}
-        label={field.label}
-        type={field.type}
-        disabled={field.name === "confirmPassword" ? !password : false}
-        register={register}
-        errors={errors}
+      {InputFields.map((field, index) => (
+        <InputField
+          key={field.name + index}
+          name={field.name}
+          label={field.label}
+          type={field.type}
+          disabled={field.name === "confirmPassword" ? !password : false}
+          register={register}
+          errors={errors}
         />
-      )}
-      <button type="submit">Cadastrar</button>
-    </form>
+      ))}
+      <Button type="submit">Cadastrar</Button>
+    </FormCSS>
     // <form onSubmit={handleSubmit(onSubmit)}>
     //   <img src={FormLogo} alt="imagem-logo"></img>
 

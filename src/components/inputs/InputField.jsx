@@ -1,4 +1,5 @@
 import { Label, Input } from "./InputField.style";
+import { Span } from "./InputField.style";
 
 const InputField = ({
   label,
@@ -18,9 +19,9 @@ const InputField = ({
         {...register(name, { required: true })}
         disabled={disabled}
       />
-      <span>{errors[name]?.message}</span>
+      <Span>{errors[name]?.message}</Span>
     </Label>
   );
 };
 
-export default Input;
+export default InputField;

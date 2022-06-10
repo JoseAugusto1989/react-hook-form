@@ -1,6 +1,6 @@
 import Form from "./pages/forms/FormField";
 
-function App() {
+const App = () => {
   return <Form />;
 }
 
