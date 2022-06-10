@@ -44,7 +44,6 @@ const Form = () => {
 
   return (
     <FormCSS onSubmit={handleSubmit(onSubmit)}>
-      <Title>Formulário</Title>
       <Img src={FormLogo} alt="imagem-logo" />
 
       {InputFields.map((field, index) => (

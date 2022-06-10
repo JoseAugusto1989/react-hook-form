@@ -31,9 +31,10 @@ export const Input = styled.input`
 export const Button = styled.button`
     width: 300px;
     height: 40px;
-    background-color: aqua;
+    background-color: #5aecec;
     border: none;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: medium;
     cursor: pointer;
 `

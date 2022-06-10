@@ -10,6 +10,7 @@ export const Input = styled.input`
   padding: 9px;
   width: 400px;
   display: flex;
+  margin-top: 2px;
   border-radius: 5px;
   &:disabled {
     opacity: 0.6;
